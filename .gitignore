@@ -1,0 +1,16 @@
+*.out
+*.pyc
+*/__pycache__
+*.pt
+*/exp-*/
+*.tar.gz
+*.zip
+extra/
+logs
+.vscode/
+figs
+*tasks*/
+*sm*/
+bresnet-*/
+task*
+eu_comparison/
