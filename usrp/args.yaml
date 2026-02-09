@@ -1,0 +1,58 @@
+logger: true
+arch: "rfnet"
+depth: 16
+s: 0.0001
+workers: 4
+multi-gpu: false
+batch-size: 256
+test-batch-size: 256
+admm-epochs: 1
+optmzr: "adam"
+lr: 0.0001
+lr-decay: 30
+momentum: 0.9
+weight-decay: 0.0001
+no-cuda: false
+seed: 1
+log-interval: 159
+save-model: ""
+masked-retrain: true
+verbose: false
+admm: false
+rho: 0.0001
+rho-num: 4
+sparsity-type: "irregular"
+combine-progressive: false
+lr-scheduler: "default"
+warmup: false
+warmup-lr: 0.0001
+warmup-epochs: 0
+mixup: false
+alpha: 0.0
+smooth: false
+smooth-eps: 0.0
+no-tricks: false
+dataset: "dronerc"
+task-folder: "tasks-sm" # "tasks - 1transmission" #"tasks-B-D1-E"
+exp-name: "exp-usrp-sm"
+base-path: ""
+save-path: ""
+input-size: 1024 # 16382
+classes: 18
+tasks: 1
+mask: "" #"usrp/exp-usrp-DS-utilkl-testnan/task2/mask.pkl"
+config-file: ""
+config-setting: "1"
+config-shrink: 0.33
+heritage-weight: false ###
+adaptive-mask: true
+admm-mask: false
+adaptive-ratio: 0.9
+epochs: 160
+epochs-prune: 30
+epochs-mask-retrain: 30
+mask-admm-epochs: 1
+load-model: "" #"usrp/exp-usrp-DS-utilkl-testnan/task2/rfnet16.pt" 
+load-model-pruned: "" #"usrp/exp-usrp-DS-utilkl-testnan/task0/prunned_rfnet16_0.0001__adam_irregular.pt"
+
+## changed input size to 288 (288 slice size)
