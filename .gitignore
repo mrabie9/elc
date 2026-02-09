@@ -14,8 +14,4 @@ figs
 bresnet-*/
 task*
 eu_comparison/
-usrp/
-radar/
-dronerc/
-mixed/
-rfmls/
+
