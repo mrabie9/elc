@@ -13,6 +13,9 @@ Lifelong learning experiments for RF signal classification, with deterministic, 
 
 **Data And Tasks Layout**
 
+Datasets are hosted on Zenodo and should be downloaded locally preserving the
+folder structure described below.
+
 Each experiment reads data from:
 `<base-path>/<task-folder>/task{N}/...`
 
