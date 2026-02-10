@@ -13,15 +13,14 @@ Lifelong learning experiments for RF signal classification, with deterministic, 
 
 **Data And Tasks Layout**
 
-Datasets are hosted on Zenodo and should be downloaded locally preserving the
-folder structure described below.
+Datasets are hosted on Zenodo ([here](https://zenodo.org/records/18558522?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImZlMDY2OTdjLTIwOGYtNGYwZi04MTY3LWE1M2FmYzE2ZjUyNCIsImRhdGEiOnt9LCJyYW5kb20iOiJmZmUzYmQwMDZjNDFjMjlhMDE5YTYzZjQ0NWIxOTM3ZiJ9.mGBUoMX7ICkqFujQWsAQXqlF-gb0E7OWViPeWqMVcz_00GcdGZ4Cq-RHcHu2mZ943X9zDQ9SCn2CBWSd_2_pew)) and should be downloaded locally preserving the folder structure described below. `sm` postfixes denote single-model tasks with all tasks concatenated into a single npz file.
 
 Each experiment reads data from:
 `<base-path>/<task-folder>/task{N}/...`
 
 Examples:
-- `radar/tasks-no-noise/task0/radar_dataset.npz`
-- `dronerc/tasks-1024sl/task1/train.npz`
+- `radar/tasks/task0/radar_dataset.npz`
+- `dronerc/tasks-sm/task0/train.npz`
 
 Expected file formats:
 - Radar tasks: `radar_dataset.npz` with `xtr`, `ytr`, `xte`, `yte` arrays.
@@ -34,9 +33,11 @@ Expected file formats:
 Common flags:
 - `--arch`: `rfnet` (deterministic), `bayes_rfnet` (Bayesian), `evidential` (DST).
 - `--base-path`: Dataset root (e.g., `radar/`).
-- `--task-folder`: Task folder under the dataset root (e.g., `tasks-no-noise`).
+- `--task-folder`: Task folder under the dataset root (i.e., `tasks` or `tasks-sm`).
 - `--tasks`: Number of tasks (e.g., `2` for `task0` and `task1`).
 - `--classes`: Total number of classes across all tasks.
+- `--classes-per-task`: Number of classes per task.
+- `--use-multi-head`: Toggled to enable/disable task-specific heads (instead of a shared head with disjoint labels for tasks)
 
 **Run Experiments**
 
