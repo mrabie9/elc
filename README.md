@@ -48,7 +48,7 @@ Lifelong Learning (multi-task)
 python main.py --exp-name "radar-lps" \
   --arch "rfnet" \
   --base-path "radar/" \
-  --task-folder "tasks-no-noise" \
+  --task-folder "tasks" \
   --classes 10 \
   --tasks 2 \
   --adaptive-ratio 0.9 \
@@ -65,7 +65,7 @@ Bayesian model (multi-task)
 python main.py --exp-name "radar-blc" \
   --arch "bayes_rfnet" \
   --base-path "radar/" \
-  --task-folder "tasks-no-noise" \
+  --task-folder "tasks" \
   --classes 10 \
   --tasks 2 \
   --adaptive-ratio 0.9 \
@@ -82,7 +82,7 @@ Evidential (DST) model (multi-task)
 python main.py --exp-name "radar-elc" \
   --arch "evidential" \
   --base-path "radar/" \
-  --task-folder "tasks-no-noise" \
+  --task-folder "tasks" \
   --classes 10 \
   --tasks 2 \
   --epochs 60 \
